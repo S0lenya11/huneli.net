@@ -1,0 +1,269 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+  
+<style>
+
+.div1{
+  background-color:#f5fffa;
+  margin:10px;
+  padding-right: 00px;
+  padding-bottom: 20px;
+  padding-left:25px;
+        border: 3px solid #73AD21;}
+.div2{
+  background-color:#f5fffa;
+  margin:10px;
+  padding-top: 000px;
+  padding-right: 000px;
+  padding-bottom: 20px;
+  padding-left:25px;
+        border: 3px solid #73AD21;}
+.div3{
+  background-color:#f5fffa;
+  margin:10px;
+  padding-top: 000px;
+  padding-right: 000px;
+  padding-bottom: 20px;
+  padding-left:0px;
+        border: 3px solid #73AD21;}
+/* Style the navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #dcffee;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.topnav a:hover {
+  background-color: #008e49;
+  color: black;
+}
+
+/* Active/current link */
+.topnav a.active {
+  background-color: #f5fffa;
+  color: white;
+}
+
+/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc; 
+  }
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.vertical-menu {
+  width: 200px;
+  height: 150px;
+  overflow-y: auto;
+}
+
+a:link, a:visited {
+  background-color: #a9ffd4;
+  color: 000000;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+a:hover, a:active {
+  background-color: #f5fffa;
+}
+</style>
+<div class="topnav">
+  <a href="anasayfa.html" target="_blank">Ana sayfa</a>
+<a href="deneme.html" target="_blank">Dış Servis Formu</a>
+<a href="onetoone.php" target="_blank">One to One Sistemi</a><br/><br/>
+</div>
+<title>
+    Dış Servis Formu
+</title>
+<body style="background-color: #dcffee ; font-family:verdana;font-size:25px;">
+<img src="logo/matteilogo.png" align="center" style="width:315px;height:60px;">
+<img src="logo/ekologo.png" align="center" style="width:335px;height:50px;">
+<img src="logo/eqologo.png" align="center" style="width:260px;height:60px;"><br/><br/>
+<img src="logo/psilogo.png" align="left" style="width:450px;height:140px;">
+<img src="logo/atlaslogo.png" align="right" style="width:260px;height:140px;"><br/>&emsp;&emsp;
+<h1 style="text-align:center"><br/>
+Dış servis Formu</h1>
+<form action="deneme.php">
+<DIV CLASS="div1">
+  <label for="lname">Firma Adı:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Müracaatı Alan Kişi:</label><br>
+  <textarea type="text"style=font-size:30px id="fname" name="firma"cols="20" rows="2"></textarea>&emsp;&emsp;
+    <textarea type="text"style=font-size:30px id="fname" name="muracat_alan"cols="20" rows="2"></textarea>
+</DIV>
+<DIV CLASS="div1">
+  <label for="lname">Müşteri İlgili Kişi:&emsp;&emsp;&emsp;&emsp;&emsp;Müşterinin Görevi:<br/>
+  <textarea type="text"style=font-size:30px id="fname" name="muracat_eden"cols="20" rows="2"></textarea>&emsp;&emsp;
+  <textarea type="text"style=font-size:30px id="fname" name="muracat_alan_gorev"cols="20" rows="2"></textarea>
+</DIV>
+<DIV CLASS="div1">
+  <label for="lname">Müşterinin Telefon&emsp;&emsp;&emsp;&emsp;Müşterinin<br/>Numarası:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;E-Postası:</label><br>
+  <textarea type="text"style=font-size:30px id="fname" name="tel"cols="20" rows="2"></textarea>&emsp;&emsp;
+    <textarea type="text"style=font-size:30px id="fname" name="email"cols="20" rows="2"></textarea>
+</DIV>
+<DIV CLASS="div1">
+  <label for="lname">Müşteri Fatura Adresi:</label><br/>
+  <textarea type="text" style=font-size:30px id="fname" name="musteri_fatura_adres" cols="20" rows="2"></textarea>&emsp;&emsp;
+  <label for="lname">Vergi Dairesi:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <label for="lname">Vergi No:</label><br>
+  <textarea type="text"style=font-size:30px id="fname" name="vd"cols="20" rows="2"></textarea>&emsp;&emsp;
+  <textarea type="text"style=font-size:30px id="fname" name="vno"cols="20" rows="2"></textarea><br>
+</DIV>
+<DIV CLASS="div1">
+  <label for="lname">Makinenin Tipi:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <label for="lname">Makinenin Seri No.:</label><br>
+  <textarea type="text"style=font-size:30px id="fname" name="makine_tipi"cols="20" rows="2"></textarea>&emsp;&emsp;
+  <textarea type="text"style=font-size:30px id="fname" name="makine_seri_no"cols="20" rows="2"></textarea><br>
+  <label for="lname">Makinenin Modeli:</label>&emsp;&emsp;&emsp;&emsp;
+  <label for="lname">Makinenin Markası:</label><br>
+  <textarea type="text"style=font-size:30px id="fname" name="makine_model"cols="20" rows="2"></textarea>&emsp;&emsp;
+  <textarea type="text"style=font-size:30px id="fname" name="makine_marka"cols="20" rows="2"></textarea><br>
+  <label for="lname">Makinenin Toplam Ç.S.:</label>&emsp;
+  <label for="lname">Makinenin Yükte Ç.S.:</label><br>
+  <textarea type="text"style=font-size:30px id="fname" name="makinetcs"cols="20" rows="2"></textarea>&emsp;&emsp;
+  <textarea type="text"style=font-size:30px id="fname" name="makineytcs"cols="20" rows="2"></textarea><br>
+</DIV>
+<DIV CLASS="div1">
+  <label for="lname">Parola 1:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Parola 2:</label><br>
+  <textarea type="text"style=font-size:30px id="fname" name="parola1"cols="20" rows="2"></textarea>&emsp;&emsp;
+  <textarea type="text"style=font-size:30px id="fname" name="parola2"cols="20" rows="2"></textarea>
+</DIV>
+<DIV CLASS="div1">
+  <label for="lname">Makinenin Bulunduğu Adres:</label><br>
+  <textarea type="text"style=font-size:30px id="fname" name="makine_adres"cols="47" rows="2"></textarea><br>
+  <label for="lname">Makinenin Bulunduğu Adresin Telefon Numarası:</label>
+  <textarea type="text"style=font-size:30px id="fname" name="makine_atel"cols="47" rows="2"></textarea><br>
+</DIV>
+<DIV CLASS="div1">
+  <label for="lname">Sonraki Servis Kaç&emsp;&emsp;&emsp;&emsp;Sonraki Servis Tipi<br>Saat Sonra Olacak:&emsp;&emsp;&emsp;&emsp;Nedir?:</label>
+  <textarea type="text"style=font-size:30px id="fname" name="saatsonra"cols="20" rows="2"></textarea>&emsp;&emsp;
+  <textarea type="text"style=font-size:30px id="fname" name="servistipi"cols="20" rows="2"></textarea><br>
+  <label for="lname">Müşteri Çalışma Saati:</label><br>
+  <textarea type="text"style=font-size:30px id="fname" name="calismasaati"cols="20" rows="2"></textarea><br>
+</DIV>
+
+<DIV CLASS="div1">
+  <label for="lname">Bildirilen Arıza veya İstenilen İş</label><br>
+  <textarea type="text" style=font-size:40px id="fname" name="ariza" cols="35" rows="10"></textarea><br>
+</DIV>
+<DIV CLASS="div1">
+  <label for="lname">Açıklamalar:</label><br>
+  <textarea type="text" style=font-size:40px id="fname" name="aciklamalar" cols="35" rows="10"></textarea><br><br>
+</DIV>
+<DIV CLASS="div2">
+  <label for="lname">Kullanılan Yedek Parçalar:</label><br/>
+  <label for="lname">Parça No:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <label for="lname">Parça Adı:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <label for="lname">Adet:</label><br>
+  <input type="text"style=font-size:30px id="fname" name="parcano1">
+  <input type="text"style=font-size:30px id="fname" name="parcaadi1">
+  <input type="text"style=font-size:30px id="fname" name="parcaadet1" size="5"><br>
+  <input type="text"style=font-size:30px id="fname" name="parcano2">
+  <input type="text"style=font-size:30px id="fname" name="parcaadi2">
+  <input type="text"style=font-size:30px id="fname" name="parcaadet2" size="5"><br>
+  <input type="text"style=font-size:30px id="fname" name="parcano3">
+  <input type="text"style=font-size:30px id="fname" name="parcaadi3">
+  <input type="text"style=font-size:30px id="fname" name="parcaadet3" size="5"><br>
+  <input type="text"style=font-size:30px id="fname" name="parcano4">
+  <input type="text"style=font-size:30px id="fname" name="parcaadi4">
+  <input type="text"style=font-size:30px id="fname" name="parcaadet4" size="5"><br>
+  <input type="text"style=font-size:30px id="fname" name="parcano5">
+  <input type="text"style=font-size:30px id="fname" name="parcaadi5">
+  <input type="text"style=font-size:30px id="fname" name="parcaadet5" size="5"><br>
+  <input type="text"style=font-size:30px id="fname" name="parcano6">
+  <input type="text"style=font-size:30px id="fname" name="parcaadi6">
+  <input type="text"style=font-size:30px id="fname" name="parcaadet6" size="5"><br>
+  <input type="text"style=font-size:30px id="fname" name="parcano7">
+  <input type="text"style=font-size:30px id="fname" name="parcaadi7">
+  <input type="text"style=font-size:30px id="fname" name="parcaadet7" size="5"><br>
+  <input type="text"style=font-size:30px id="fname" name="parcano8">
+  <input type="text"style=font-size:30px id="fname" name="parcaadi8">
+  <input type="text"style=font-size:30px id="fname" name="parcaadet8" size="5"><br>
+  <input type="text"style=font-size:30px id="fname" name="parcano9">
+  <input type="text"style=font-size:30px id="fname" name="parcaadi9">
+  <input type="text"style=font-size:30px id="fname" name="parcaadet9" size="5"><br>
+  <input type="text"style=font-size:30px id="fname" name="parcano10">
+  <input type="text"style=font-size:30px id="fname" name="parcaadi10">
+  <input type="text"style=font-size:30px id="fname" name="parcaadet10" size="5"><br><br>
+</DIV>
+<DIV CLASS="div1">
+  <label for="lname">Öneriler:</label><br>
+  <textarea type="text" style=font-size:40px id="fname" name="oneriler" cols="35" rows="10"></textarea><br><br>
+</DIV>
+<DIV CLASS="div3">
+  <label for="lname">Tarih:</label>&emsp;
+  <label for="lname">Çalışanlar:</label>&emsp;&emsp;&emsp;&emsp;
+  <label for="lname">Baş.:</label>&emsp;&emsp;
+  <label for="lname">Bitiş:</label>&emsp;
+  <label for="lname">Süre:</label><br>
+  <input type="text"style=font-size:30px id="fname" name="tarih1"size="6">
+  <input type="text"style=font-size:30px id="fname" name="calisanlar1"size="15">
+  <input type="text"style=font-size:30px id="fname" name="baslangic1"size="6">
+  <input type="text"style=font-size:30px id="fname" name="bitis1"size="6">
+  <input type="text"style=font-size:30px id="fname" name="sure1"size="6"><br>
+  <input type="text"style=font-size:30px id="fname" name="tarih2"size="6">
+  <input type="text"style=font-size:30px id="fname" name="calisanlar2"size="15">
+  <input type="text"style=font-size:30px id="fname" name="baslangic2"size="6">
+  <input type="text"style=font-size:30px id="fname" name="bitis2"size="6">
+  <input type="text"style=font-size:30px id="fname" name="sure2"size="6"><br>
+  <input type="text"style=font-size:30px id="fname" name="tarih3"size="6">
+  <input type="text"style=font-size:30px id="fname" name="calisanlar3"size="15">
+  <input type="text"style=font-size:30px id="fname" name="baslangic3"size="6">
+  <input type="text"style=font-size:30px id="fname" name="bitis3"size="6">
+  <input type="text"style=font-size:30px id="fname" name="sure3"size="6"><br>
+  <input type="text"style=font-size:30px id="fname" name="tarih4"size="6">
+  <input type="text"style=font-size:30px id="fname" name="calisanlar4"size="15">
+  <input type="text"style=font-size:30px id="fname" name="baslangic4"size="6">
+  <input type="text"style=font-size:30px id="fname" name="bitis4"size="6">
+  <input type="text"style=font-size:30px id="fname" name="sure4"size="6"><br><br>
+</DIV>
+<DIV CLASS="div3">
+  <label for="lname">Yol:</label><br/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <label align="right" for="lname">KM.:</label>&emsp;&emsp;&emsp;&emsp;
+  <label for="lname" align="center">SAAT:</label>&emsp;
+<br/>
+  <label for="lname">Gidiş:</label>&emsp;&emsp;&emsp;
+  <input type="text"style=font-size:30px id="fname" name="km1"size="6">&emsp;&emsp;&emsp;
+  <input type="text"style=font-size:30px id="fname" name="saat1"size="15"><br/><br/>
+  <label for="lname">Dönüş:</label>&emsp;&emsp;
+  <input type="text"style=font-size:30px id="fname" name="km2"size="6">&emsp;&emsp;&emsp;
+  <input type="text"style=font-size:30px id="fname" name="saat2"size="15">
+</DIV>
+<br><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <input type="submit" style=font-size:100px id="fname" value="Gönder" size="20"><br><br/><br/><br/>
+  
+  
+
+  
+  
+  
+</form>
+</body>
+</html>
