@@ -1,0 +1,189 @@
+<html>
+<?php
+include'temel.php';
+include'connect.php';
+?>
+<style>
+table {
+  border: 1px solid black;
+}
+</style>
+<title>
+   PDF
+</title>
+<body style="background-color: #ffe5b4 ; font-family:verdana;font-size:20px;">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+<?PHP
+/* Form numarası*/
+$sql="SELECT * FROM Dis_Servis_Formu where id='105'";
+$result = mysqli_query($conn, $sql);
+    while ($row = mysqli_fetch_array($result)){
+?>
+<table>
+<tr>
+    <td> Müracat Eden Kişi:</td><td><?PHP echo $row[0]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> Firma:</td><td><?PHP echo $row[1]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> Müracaat Eden Kişi Görevi:</td><td><?PHP echo $row[3]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> Tel No:</td><td><?PHP echo $row[4]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+<tr>
+    <td> Müracat Eden Kişi:</td><td><?PHP echo $row[0]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+    <td> Makinenin :&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td><th>  </th><th>  </th><th>    </th><th>  </th><td>Müşteri Fatura Adresi:</td><td><?PHP echo $row[0]; ?></td>
+</tr>
+<tr>
+    <td> Tipi:</td><td><?PHP echo $row[0]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> Seri No:</td><td><?PHP echo $row[1]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td width="100px"> </td>
+    <td> Tel:</td><td><?PHP echo $row[0]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> E-Posta:</td><td><?PHP echo $row[1]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+</tr>
+<tr>
+    <td> Toplam Çalışma Saati:</td><td><?PHP echo $row[0]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> Toplam Yükte Çalışma Saati:</td><td><?PHP echo $row[1]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td width="100px"> </td>
+    <td> Vergi Dairesi:</td><td><?PHP echo $row[0]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> Vergi Numarası:</td><td><?PHP echo $row[1]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+<tr>
+<table>
+<tr>
+    <td> Makinenin :&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td><th>  </th><th>  </th><th>    </th><th>  </th><td>Müşteri Fatura Adresi:</td><td><?PHP echo $row[0]; ?></td>
+</tr>
+<tr>
+    <td> Tipi:</td><td><?PHP echo $row[0]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> Seri No:</td><td><?PHP echo $row[1]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td width="100px"> </td>
+    <td> Tel:</td><td><?PHP echo $row[0]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> E-Posta:</td><td><?PHP echo $row[1]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+</tr>
+<tr>
+    <td> Toplam Çalışma Saati:</td><td><?PHP echo $row[0]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> Toplam Yükte Çalışma Saati:</td><td><?PHP echo $row[1]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td width="100px"> </td>
+    <td> Vergi Dairesi:</td><td><?PHP echo $row[0]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+    <td> Vergi Numarası:</td><td><?PHP echo $row[1]; ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td></tr>
+<tr>
+</table>
+</table>
+        
+        
+        
+ <table class="table">
+          <tbody>
+            <br><br><br>
+<tr>
+  <tr>
+    <td>id:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>Firma:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>Müracat alan:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>Müracat eden:</td>
+    <td>                   </td>
+  <tr>
+    <td>tel:</td>
+    <td>                   </td>
+  <tr>
+    <td>email:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>musteri:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>fatura_adres:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>Vergi Dairesi:</td>
+    <td>                   </td>
+  <tr>
+    <td>tel:</td>
+    <td>                   </td>
+  <tr>    
+    <td>vno:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>makine_tipi:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>makine_seri_no:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>makine_model:</td>
+    <td>                   </td>
+  <tr>
+    <td>makine_marka:</td>
+    <td>                   </td>
+  <tr>
+    <td>makinetcs:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>makineytcs:</td>
+    <td>                   </td>
+  <tr>
+    <tr>
+    <td>makine_adres:</td>
+    <td>                   </td>
+    <tr>
+  <tr>
+    <td>makine_atel:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>saatsonra:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>servistipi:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>calismasaati:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>ariza:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>aciklamalar:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>oneriler:</td>
+    <td>                   </td>
+  <tr>
+  <tr>
+    <td>reg_date:</td>
+    <td>                   </td>
+  <tr>
+    
+      <br>
+
+    </tbody>
+  </table>
+<?PHP
+}
+?>
