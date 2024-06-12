@@ -8,14 +8,17 @@ async function fetchLotteryResults() {
             throw new Error(`Network response was not ok: ${response.statusText}`);
         }
         const text = await response.text();
+        console.log(text); // Log the fetched HTML to check its structure
         const parser = new DOMParser();
         const doc = parser.parseFromString(text, 'text/html');
 
         const winningNumbers = doc.querySelectorAll('.loto-numbers div');
+        console.log(winningNumbers); // Log the selected elements to check if they are correct
         if (winningNumbers.length === 0) {
             throw new Error('No lottery numbers found. Check the selector.');
         }
         const numbers = Array.from(winningNumbers).map(num => num.textContent.trim());
+        console.log(numbers); // Log the extracted numbers to check if they are correct
 
         const numbersContainer = document.querySelector('.numbers-container');
         numbersContainer.innerHTML = `
