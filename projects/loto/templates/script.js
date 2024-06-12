@@ -1,5 +1,7 @@
 async function fetchLotteryResults() {
-    const url = 'fetch_lottery_results.php'; // Update the path to your PHP script
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // Change this to a different CORS proxy service URL if needed
+    const url = proxyUrl + 'https://www.millipiyangoonline.com/sayisal-loto/cekilis-sonuclari.61.2024';
+    
     try {
         const response = await fetch(url);
         if (!response.ok) {
