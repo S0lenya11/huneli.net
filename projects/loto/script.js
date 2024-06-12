@@ -1,24 +1,28 @@
-from flask import Flask, render_template
-import requests
-from bs4 import BeautifulSoup
+async function fetchLotteryResults() {
+    const url = 'https://www.millipiyangoonline.com/sayisal-loto/cekilis-sonuclari.61.2024';
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
-app = Flask(__name__)
+    try {
+        const response = await fetch(proxyUrl + url);
+        if (!response.ok) {
+            throw new Error(`Network response was not ok: ${response.statusText}`);
+        }
+        const text = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, 'text/html');
 
-def get_lottery_results():
-    url = "https://www.millipiyangoonline.com/sayisal-loto/cekilis-sonuclari.61.2024"
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    
-    # Adjust the selector to match the actual HTML structure
-    winning_numbers = soup.select('.winning-number-class')  
-    numbers = [num.text for num in winning_numbers]
-    
-    return numbers
+        const winningNumbers = doc.querySelectorAll('.loto-numbers div');
+        if (winningNumbers.length === 0) {
+            throw new Error('No lottery numbers found. Check the selector.');
+        }
+        const numbers = Array.from(winningNumbers).map(num => num.textContent.trim());
 
-@app.route('/')
-def home():
-    numbers = get_lottery_results()
-    return render_template('index.html', numbers=numbers)
+        const numbersList = document.getElementById('numbers');
+        numbersList.innerHTML = numbers.map(num => `<li>${num}</li>`).join('');
+    } catch (error) {
+        console.error('Error fetching lottery results:', error);
+        document.getElementById('numbers').innerHTML = `<li>Error fetching lottery results. See console for details.</li>`;
+    }
+}
 
-if __name__ == '__main__':
-    app.run(debug=True)
+document.addEventListener('DOMContentLoaded', fetchLotteryResults);
