@@ -1,5 +1,5 @@
 async function fetchLotteryResults() {
-    const url = 'fetch_lottery_results.php'; // Update the path to your PHP file
+    const url = 'fetch_lottery_results.php'; // Update the path to your PHP script
     try {
         const response = await fetch(url);
         if (!response.ok) {
