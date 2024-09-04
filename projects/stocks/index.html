@@ -18,7 +18,7 @@
             # Function to install libraries using micropip
             async def install_libraries():
                 try:
-                    # Attempt to install the required libraries
+                    # Attempt to install only essential libraries
                     await micropip.install("numpy")
                     await micropip.install("pandas")
                     await micropip.install("matplotlib")
