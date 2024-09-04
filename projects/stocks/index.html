@@ -11,19 +11,18 @@
     <h1>Borsa Istanbul Stock Analysis</h1>
     <div id="output"></div>
     <py-script>
-        # Import libraries
         import asyncio
-        import pyodide
+        import micropip
 
-        # Function to load libraries
-        async def load_libraries():
-            await pyodide.loadPackage("numpy")
-            await pyodide.loadPackage("pandas")
-            await pyodide.loadPackage("matplotlib")
-            await pyodide.loadPackage("yfinance")
+        # Function to install libraries using micropip
+        async def install_libraries():
+            await micropip.install("numpy")
+            await micropip.install("pandas")
+            await micropip.install("matplotlib")
+            await micropip.install("yfinance")
 
-        # Run the library loading function
-        asyncio.ensure_future(load_libraries())
+        # Install libraries before proceeding
+        await install_libraries()
 
         import numpy as np
         import pandas as pd
