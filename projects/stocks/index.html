@@ -17,10 +17,20 @@
         async def main():
             # Function to install libraries using micropip
             async def install_libraries():
-                await micropip.install("numpy")
-                await micropip.install("pandas")
-                await micropip.install("matplotlib")
-                await micropip.install("yfinance")
+                try:
+                    # Attempt to install the required libraries
+                    await micropip.install("numpy")
+                    await micropip.install("pandas")
+                    await micropip.install("matplotlib")
+                    await micropip.install("yfinance")
+                except ValueError as e:
+                    # If installation fails, catch the exception and print it
+                    print(f"Error installing packages: {e}")
+                    # Install packages with `keep_going=True` to get a list of missing wheels
+                    await micropip.install("numpy", keep_going=True)
+                    await micropip.install("pandas", keep_going=True)
+                    await micropip.install("matplotlib", keep_going=True)
+                    await micropip.install("yfinance", keep_going=True)
 
             # Run the installation
             await install_libraries()
