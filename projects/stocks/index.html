@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Python Output</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyScript Example</title>
+    <!-- Include PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
     <h1>Python Script Output</h1>
     <div id="result"></div>
-    <script>
-        fetch('/cgi-bin/app.py')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('result').innerHTML = data;
-            });
-    </script>
+
+    <!-- PyScript Code -->
+    <py-script>
+        x = 1
+        y = 2
+
+        # Creating HTML content
+        content = f"<h1>Hello, World!</h1><p>The sum of x and y is: {x + y}</p>"
+
+        # Display the result in the div with id 'result'
+        from js import document
+        document.getElementById("result").innerHTML = content
+    </py-script>
+
 </body>
 </html>
