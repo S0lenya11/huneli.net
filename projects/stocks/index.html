@@ -22,7 +22,7 @@
                     await micropip.install("numpy")
                     await micropip.install("pandas")
                     await micropip.install("matplotlib")
-                    await micropip.install("yfinance")
+                    # Remove yfinance if not supported
                 except ValueError as e:
                     # If installation fails, catch the exception and print it
                     print(f"Error installing packages: {e}")
@@ -32,7 +32,6 @@
 
             import numpy as np
             import pandas as pd
-            import yfinance as yf
             import matplotlib.pyplot as plt
             from datetime import datetime
 
@@ -43,11 +42,11 @@
                 # Add more Borsa Istanbul tickers here
             ]
 
-            # Function to fetch historical stock data for a specific date range
+            # Placeholder function to fetch stock data (update with a supported method)
             def fetch_stock_data(ticker, start_date, end_date):
-                stock = yf.Ticker(ticker)
-                data = stock.history(start=start_date, end=end_date)
-                return data
+                # This is a placeholder. Implement a supported method to fetch stock data.
+                print(f"Fetching data for {ticker} from {start_date} to {end_date}")
+                return pd.DataFrame()  # Return an empty DataFrame for now
 
             # Function to calculate Fibonacci retracement levels
             def calculate_fibonacci_levels(data):
@@ -122,7 +121,7 @@
                 levels = calculate_fibonacci_levels(data)
 
                 # Step 3: Find the current price and closest Fibonacci level
-                current_price = data['Close'].iloc[-1]
+                current_price = data['Close'].iloc[-1] if not data.empty else 0
                 closest_fib = find_closest_fibonacci_level(current_price, levels)
 
                 # Step 4: Generate prediction message
